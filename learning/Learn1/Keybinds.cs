@@ -1,8 +1,8 @@
 namespace learning.Learn1;
 
-public class Class
+public class Keybinds
 {
-     static void DetectKeybinds()
+     public void DetectKeybinds()
      {
           Console.WriteLine("Pizza is better than hamburger do you agree? (Y/N)\n");
           bool gotreply = false;
