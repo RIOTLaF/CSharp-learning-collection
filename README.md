@@ -6,3 +6,5 @@ Steps:
 2. Goes learning more CSharp
 3. test it
 4. if it works put it here
+
+everything was made with .NET 9.0 and Arch Linux soo is expected to don't work well in Windows or MacOS
