@@ -26,7 +26,7 @@ namespace learning
             
             Console.WriteLine("\nSo let's start here, select any of your like\n");
             
-            Console.WriteLine("Keybinds - 1\nIt's a bool? - 2\n");
+            Console.WriteLine("Keybinds - 1\nIt's a bool? - 2\n3 - CLI");
             Console.Write("Insert(ONLY INT NUMBERS): ");
             string input = Console.ReadLine();
             bool result = int.TryParse(input, out int newresult);
@@ -55,6 +55,19 @@ namespace learning
                     Devprint("\nyou can see the source code at Learn1/Conditions.cs");
                     Console.WriteLine("10 seconds before re-starting");
                     Thread.Sleep(10000);
+                    Console.Clear();
+                    Recursive();
+                } else if (newresult == 3)
+                {
+                    Console.Clear();
+
+                    Console.WriteLine("WARNING: LINUX ONLY FEATURE(for now)");
+                    Console.WriteLine("You can find a pre-compiled binary for test in .Linux/'Arguments Number'");
+                    Console.WriteLine("Feel free to test it like .Linux/'Arguments Number' arg1 arg2 arg3");
+                    Console.WriteLine("The src code is avainle in Learn1/.Arguments.cs");
+                    
+                    Console.WriteLine("15 seconds before re-starting");
+                    Thread.Sleep(15000);
                     Console.Clear();
                     Recursive();
                 }
