@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using learning.Learn2;
 
 namespace learning
 {
@@ -26,12 +27,12 @@ namespace learning
             
             Console.WriteLine("\nSo let's start here, select any of your like\n");
             
-            Console.WriteLine("Keybinds - 1\nIt's a bool? - 2\n3 - CLI");
+            Console.WriteLine("Keybinds - 1\nIt's a bool? - 2\n3 - CLI\n4 - RNG Game");
             Console.Write("Insert(ONLY INT NUMBERS): ");
             string input = Console.ReadLine();
             bool result = int.TryParse(input, out int newresult);
 
-            if (result && newresult > 0 & newresult < 3)
+            if (result && newresult > 0 & newresult <= 4)
             {
                 if (newresult == 1)
                 {
@@ -64,10 +65,23 @@ namespace learning
                     Console.WriteLine("WARNING: LINUX ONLY FEATURE(for now)");
                     Console.WriteLine("You can find a pre-compiled binary for test in .Linux/'Arguments Number'");
                     Console.WriteLine("Feel free to test it like .Linux/'Arguments Number' arg1 arg2 arg3");
-                    Console.WriteLine("The src code is avainle in Learn1/.Arguments.cs");
+                    Console.WriteLine("The src code is available in Learn1/.Arguments.cs");
                     
                     Console.WriteLine("15 seconds before re-starting");
                     Thread.Sleep(15000);
+                    Console.Clear();
+                    Recursive();
+                } else if (newresult == 4)
+                {
+                    Console.Clear();
+
+                    var allat = new learning.Learn2.RNG();
+                    allat.game_rng();
+                    
+                    Devprint("\nyou can see the source code at Learn2/RNG.cs");
+                    Console.WriteLine("15 seconds before re-starting");
+                    Thread.Sleep(15000);
+                    
                     Console.Clear();
                     Recursive();
                 }
