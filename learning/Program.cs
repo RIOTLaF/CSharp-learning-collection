@@ -27,12 +27,12 @@ namespace learning
             
             Console.WriteLine("\nSo let's start here, select any of your like\n");
             
-            Console.WriteLine("Keybinds - 1\nIt's a bool? - 2\n3 - CLI\n4 - RNG Game");
+            Console.WriteLine("Keybinds - 1\nIt's a bool? - 2\n3 - CLI\n4 - RNG Game\n5 - Filesystem");
             Console.Write("Insert(ONLY INT NUMBERS): ");
             string input = Console.ReadLine();
             bool result = int.TryParse(input, out int newresult);
 
-            if (result && newresult > 0 & newresult <= 4)
+            if (result && newresult > 0 & newresult <= 5)
             {
                 if (newresult == 1)
                 {
@@ -79,6 +79,20 @@ namespace learning
                     allat.game_rng();
                     
                     Devprint("\nyou can see the source code at Learn2/RNG.cs");
+                    Console.WriteLine("15 seconds before re-starting");
+                    Thread.Sleep(15000);
+                    
+                    Console.Clear();
+                    Recursive();
+                } else if (newresult == 5)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Writing File...\n");
+                    
+                    var allat = new learning.Learn2.File();
+                    allat.createfile();
+                    
+                    Devprint("\nyou can see the source code at Learn2/filesystem.cs");
                     Console.WriteLine("15 seconds before re-starting");
                     Thread.Sleep(15000);
                     
