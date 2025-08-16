@@ -27,7 +27,7 @@ namespace learning
             
             Console.WriteLine("\nSo let's start here, select any of your like\n");
             
-            Console.WriteLine("Keybinds - 1\nIt's a bool? - 2\n3 - CLI\n4 - RNG Game\n5 - Filesystem");
+            Console.WriteLine("1 - Keybinds\n2 - It's a bool?\n3 - CLI\n4 - RNG Game\n5 - Filesystem");
             Console.Write("Insert(ONLY INT NUMBERS): ");
             string input = Console.ReadLine();
             bool result = int.TryParse(input, out int newresult);
